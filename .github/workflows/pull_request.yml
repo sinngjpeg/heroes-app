@@ -25,9 +25,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: Upload a Build Artifact (if successful)
+      - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
-        if: success()  # Upload condicional
+        if: success()
         with:
             name: android-ci-cd.apk
             path: app/build/outputs/apk/app-debug.apk
